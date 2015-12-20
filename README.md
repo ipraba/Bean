@@ -10,26 +10,26 @@ Image Downloader with Cache written in Swift
 Usage
 -----
 
-Downloading Image
+####Downloading Image
 
        Bean.download(remoteUrl).getImage { (url, image, error) -> Void in
          yourImageView.image = image
        }
 
-Downloading Json
+####Downloading Json
 
        Bean.download(jsonUrl!, shouldCache: true).getJSON { (url, json, error) -> Void in
           //Your JSON file
        }
 
-You can also make use of the Imageview extensions to easily set the images
+####You can also make use of the Imageview extensions to easily set the images
 
     public func setImageWithUrl(url: NSURL, completion: (error: NSError?) -> Void)
     public func setImageWithUrl(url: NSURL)
     public func setImageWithUrl(url: NSURL, placeholderImage: UIImage? = default, completion: ((error: NSError?) -> Void)?)
 
 
-Caching
+####Caching
    
 Storing in Cache
 
@@ -57,7 +57,7 @@ pod "Bean"
 
 License
 -------
-EPContactsPicker is available under the MIT license. See the [LICENSE](https://github.com/ipraba/EPContactsPicker/blob/master/LICENSE) file for more info.
+Bean is available under the MIT license. See the [LICENSE](https://github.com/ipraba/Bean/blob/master/LICENSE) file for more info.
 
 Contributors
 ------------
