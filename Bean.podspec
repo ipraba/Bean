@@ -4,7 +4,11 @@ s.version          = "1.0.0"
 s.summary          = "Image downloading and caching made easy"
 s.description      = <<-DESC
 Features
-1. Download file
+1. Download files easily
+2. Imageview Extension to set the images from url
+3. Cancelation of image loads
+4. Caching of resources using NSCache
+
 DESC
 
 s.homepage         = "https://github.com/ipraba/Bean"
