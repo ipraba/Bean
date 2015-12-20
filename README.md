@@ -11,7 +11,16 @@ Image Downloading with Cache written in Swift
 Usage
 -----
 
-To run the example project, clone the repo, and run `pod install` from the Example directory first.
+      `Bean.download(remoteUrl).getImage { (url, image, error) -> Void in
+         yourImageView.image = image
+      }`
+
+You can also make use of the Imageview extensions to easily set the images
+
+    public func setImageWithUrl(url: NSURL, completion: (error: NSError?) -> Void)
+    public func setImageWithUrl(url: NSURL)
+    public func setImageWithUrl(url: NSURL, placeholderImage: UIImage? = default, completion: ((error: NSError?) -> Void)?)
+
 
 Requirements
 ------------
