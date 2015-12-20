@@ -1,8 +1,7 @@
 # Bean
 
-Image Downloading with Cache written in Swift
+Image Downloader with Cache written in Swift
 
-[![CI Status](http://img.shields.io/travis/Prabaharan/Bean.svg?style=flat)](https://travis-ci.org/Prabaharan/Bean)
 [![Version](https://img.shields.io/cocoapods/v/Bean.svg?style=flat)](http://cocoapods.org/pods/Bean)
 [![License](https://img.shields.io/cocoapods/l/Bean.svg?style=flat)](https://github.com/ipraba/Bean/blob/master/LICENSE)
 [![Platform](https://img.shields.io/cocoapods/p/Bean.svg?style=flat)](http://cocoapods.org/pods/Bean)
@@ -11,9 +10,17 @@ Image Downloading with Cache written in Swift
 Usage
 -----
 
-      `Bean.download(remoteUrl).getImage { (url, image, error) -> Void in
+Downloading Image
+
+       Bean.download(remoteUrl).getImage { (url, image, error) -> Void in
          yourImageView.image = image
-      }`
+       }
+
+Downloading Json
+
+       Bean.download(jsonUrl!, shouldCache: true).getJSON { (url, json, error) -> Void in
+          //Your JSON file
+       }
 
 You can also make use of the Imageview extensions to easily set the images
 
@@ -21,6 +28,18 @@ You can also make use of the Imageview extensions to easily set the images
     public func setImageWithUrl(url: NSURL)
     public func setImageWithUrl(url: NSURL, placeholderImage: UIImage? = default, completion: ((error: NSError?) -> Void)?)
 
+
+Caching
+   
+Storing in Cache
+
+       Cache.sharedCache.storeAnyObject(obj, url: urlString)
+       Cache.sharedCache.storeImage(image, url: urlString)
+       
+Extracting from Cache
+
+       Cache.sharedCache.getImage(url)
+       Cache.sharedCache.getData(url)
 
 Requirements
 ------------
