@@ -1,0 +1,14 @@
+PODS:
+  - Bean (0.1.0)
+
+DEPENDENCIES:
+  - Bean (from `../`)
+
+EXTERNAL SOURCES:
+  Bean:
+    :path: ../
+
+SPEC CHECKSUMS:
+  Bean: 3f2646ea70db65a3666c78652ee4b697b2054009
+
+COCOAPODS: 0.39.0
