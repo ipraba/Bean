@@ -1,6 +1,6 @@
 # Bean
 
-Image Downloader with Cache written in Swift
+Image, JSON Downloader with Cache written in Swift
 
 [![Version](https://img.shields.io/cocoapods/v/Bean.svg?style=flat)](http://cocoapods.org/pods/Bean)
 [![License](https://img.shields.io/cocoapods/l/Bean.svg?style=flat)](https://github.com/ipraba/Bean/blob/master/LICENSE)
